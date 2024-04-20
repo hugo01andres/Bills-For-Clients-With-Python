@@ -32,37 +32,31 @@ def revisar_check():
     for c in cuadros_comida:
         if variables_comida[x].get() == 1:
             cuadros_comida[x].config(state=NORMAL)
-            if cuadros_comida[x].get() == '0':
-                cuadros_comida[x].delete(0,END)
-            cuadros_comida[x].focus() #Para que ete el cursor
+            cuadros_comida[x].focus()  # Set focus to the Entry widget
         else:
             cuadros_comida[x].config(state=DISABLED)
-            texto_comida[x].set('0')
-        x +=1
+            cuadros_comida[x].delete(0, END)  # Clear the Entry widget
+        x += 1
 
-    x = 0
+    x = 0  # Reset x before iterating through cuadros_bebida
     for c in cuadros_bebida:
         if variables_bebida[x].get() == 1:
             cuadros_bebida[x].config(state=NORMAL)
-            if cuadros_bebida[x].get() == '0':
-                cuadros_bebida[x].delete(0,END)
-            cuadros_bebida[x].focus() #Para que ete el cursor
+            cuadros_bebida[x].focus()  # Set focus to the Entry widget
         else:
             cuadros_bebida[x].config(state=DISABLED)
-            texto_bebida[x].set('0')
-        x +=1
+            cuadros_bebida[x].delete(0, END)  # Clear the Entry widget
+        x += 1
 
-    x = 0
+    x = 0  # Reset x before iterating through cuadros_postre
     for c in cuadros_postre:
         if variables_postre[x].get() == 1:
             cuadros_postre[x].config(state=NORMAL)
-            if cuadros_postre[x].get() == '0':
-                cuadros_postre[x].delete(0,END)
-            cuadros_postre[x].focus() #Para que ete el cursor
+            cuadros_postre[x].focus()  # Set focus to the Entry widget
         else:
             cuadros_postre[x].config(state=DISABLED)
-            texto_postre[x].set('0')
-        x +=1
+            cuadros_postre[x].delete(0, END)  # Clear the Entry widget
+        x += 1
 
 
 def total():
